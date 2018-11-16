@@ -33,16 +33,26 @@ class Spacerator extends React.Component {
   render() {
     return (
       <main>
+        <h1>Spacerator</h1>
+        <p className="intro">
+          Type into the input and then copy the letterspaced result. This is
+          really useful for tracking out capital letters in Google Slides.
+        </p>
         <input
           type="text"
           placeholder="type something…"
           onChange={this.handleChange}
         />
-        <div>the message is: {this.state.input}</div>
-        <div>
-          the result is: <span>{this.formatMessage(this.state.input)}</span>
+        <div className="result">
+          <p className="result__text">{this.formatMessage(this.state.input)}</p>
+          <Clipboard
+            data-clipboard-text={this.state.output}
+            className="result__button"
+            component="a"
+          >
+            <span>Copy</span>
+          </Clipboard>
         </div>
-        <Clipboard data-clipboard-text={this.state.output}>Copy</Clipboard>
       </main>
     )
   }
