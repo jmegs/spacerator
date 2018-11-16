@@ -1,4 +1,5 @@
 import React from 'react'
+import Clipboard from 'react-clipboard.js'
 
 class Spacerator extends React.Component {
   constructor(props) {
@@ -8,12 +9,12 @@ class Spacerator extends React.Component {
 
   handleChange = event => {
     let userInput = event.target.value
-    this.setState({ input: userInput, output: this.formatMessage })
+    this.setState({ input: userInput, output: this.formatMessage(userInput) })
   }
 
-  formatMessage = () => {
+  formatMessage = string => {
     return (
-      this.state.input
+      string
         .split(' ')
         // for each word split the word into chars
         .map(w => w.split('').join('\xa0'))
@@ -22,8 +23,10 @@ class Spacerator extends React.Component {
         .join('\xa0 ')
         .toUpperCase()
     )
+  }
 
-    // this.setState({ reversedMessage: result })
+  getText = () => {
+    return this.state.output
   }
   render() {
     return (
@@ -37,7 +40,7 @@ class Spacerator extends React.Component {
         <div>
           the result is: <span>{this.formatMessage(this.state.input)}</span>
         </div>
-        <button onClick={this.formatMessage}>Format</button>
+        <Clipboard data-clipboard-text={this.state.output}>Copy</Clipboard>
       </main>
     )
   }
