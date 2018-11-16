@@ -1,6 +1,8 @@
 import React from 'react'
 import Clipboard from 'react-clipboard.js'
 
+import '../style.css'
+
 class Spacerator extends React.Component {
   constructor(props) {
     super(props)
