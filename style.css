@@ -9,35 +9,41 @@ body {
   font-family: system-ui;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 72px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+main {
+  padding: 56px 96px;
 }
 
 h1 {
   font-size: 56px;
-  line-height: 56px;
-  margin-bottom: 32px;
+  line-height: 60px;
+  margin-bottom: 12px;
+}
+
+.version {
+  font-family: 'SF Mono', monospace;
+  font-size: 14px;
+  color: #ccc;
+  font-weight: 200;
 }
 
 .intro {
-  margin: 0 auto 24px;
   max-width: 30em;
   font-size: 16px;
   line-height: 24px;
+  margin-bottom: 56px;
 }
 
 .inputContainer {
   display: grid;
   grid-template-columns: 90% 1fr;
-  margin: 0 auto 48px;
   height: 56px;
   width: 343px;
   font-size: 16px;
   padding: 0 12px;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
   border: unset;
   border: 1px solid #d0d0d0;
   justify-content: baseline;
@@ -67,8 +73,7 @@ input {
 .result {
   width: 343px;
   height: 60px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 56px;
   display: flex;
   background: whitesmoke;
   border-radius: 8px;

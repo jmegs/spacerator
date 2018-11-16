@@ -44,7 +44,9 @@ class Spacerator extends React.Component {
   render() {
     return (
       <main>
-        <h1>Spacerator</h1>
+        <h1>
+          Spacerator <span className="version">v1.0</span>
+        </h1>
         <p className="intro">
           Type into the input and then copy the letterspaced result. This is
           really useful for tracking out capital letters in Google Slides.
