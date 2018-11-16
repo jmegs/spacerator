@@ -74,6 +74,9 @@ class Spacerator extends React.Component {
             <span>Copy</span>
           </Clipboard>
         </div>
+        <span className="creds">
+          made by <a href="https://twitter.com/jmegs">@jmegs</a>
+        </span>
       </main>
     )
   }
