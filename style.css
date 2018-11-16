@@ -29,15 +29,39 @@ h1 {
   line-height: 24px;
 }
 
-input {
+.inputContainer {
+  display: grid;
+  grid-template-columns: 90% 1fr;
+  margin: 0 auto 48px;
   height: 56px;
   width: 343px;
   font-size: 16px;
-  padding: 12px;
+  padding: 0 12px;
   margin-bottom: 48px;
   border: unset;
   border: 1px solid #d0d0d0;
+  justify-content: baseline;
   border-radius: 4px;
+}
+
+input {
+  height: 100%;
+  all: unset;
+  text-align: left;
+  /* padding-left: 12px; */
+}
+
+.inputContainer__clear {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: baseline;
+  font-size: 24px;
+  padding: 12px;
+}
+
+.inputContainer__clear span {
+  margin-top: -2px;
 }
 
 .result {
@@ -64,12 +88,19 @@ input {
   padding: 12px;
   width: 72px;
   background: dodgerblue;
+  color: white;
   justify-content: center;
   align-items: center;
   cursor: copy;
   border-radius: 0 8px 8px 0;
+  transition: all 250ms;
+}
+
+.result__button:hover {
+  background: #1b81e5;
 }
 
 .result__button span {
-  color: white;
+  font-weight: 500;
+  color: inherit;
 }
