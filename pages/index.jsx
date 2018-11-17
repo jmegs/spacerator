@@ -48,15 +48,19 @@ class Spacerator extends React.Component {
         <Head>
           <title>Spacerator</title>
           <meta charSet="utf-8" />
-          <meta name="description" content="A little utility to track out text. Inspired by Google Slides' lack of letterspacing."/>
+          <meta
+            name="description"
+            content="A little utility to track out text. Inspired by Google Slides' lack of letterspacing."
+          />
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
-        <h1>
-          Spacerator <span className="version">v1.0</span>
-        </h1>
+        <header>
+          <h1>Spacerator</h1>
+          <span className="version">v1.0</span>
+        </header>
         <p className="intro">
           Type into the input and then copy the letterspaced result. This is
           really useful for tracking out capital letters in Google Slides.
@@ -65,7 +69,7 @@ class Spacerator extends React.Component {
           <input
             value={this.state.input}
             type="text"
-            placeholder="type something…"
+            placeholder="Type something…"
             onChange={this.handleChange}
           />
           {this.state.dirty && (
@@ -78,7 +82,9 @@ class Spacerator extends React.Component {
           <p className="result__text">{this.state.output}</p>
           <Clipboard
             data-clipboard-text={this.state.output}
-            className="result__button"
+            className={
+              this.state.dirty ? 'result__button' : 'result__button disabled'
+            }
             component="a"
           >
             <span>Copy</span>

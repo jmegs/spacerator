@@ -13,13 +13,18 @@ body {
 }
 
 main {
-  padding: 56px 96px;
+  padding: 6vh 6vw;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
 }
 
 h1 {
   font-size: 56px;
   line-height: 60px;
-  margin-bottom: 12px;
+  margin-bottom: 32px;
 }
 
 .version {
@@ -27,6 +32,7 @@ h1 {
   font-size: 14px;
   color: #a1a1a1;
   font-weight: 200;
+  margin-left: 4px;
 }
 
 .intro {
@@ -40,7 +46,7 @@ h1 {
   display: grid;
   grid-template-columns: 90% 1fr;
   height: 56px;
-  width: 343px;
+  max-width: 343px;
   font-size: 16px;
   padding: 0 12px;
   margin-bottom: 56px;
@@ -70,7 +76,7 @@ input {
 }
 
 .result {
-  width: 343px;
+  max-width: 343px;
   height: 60px;
   margin-bottom: 56px;
   display: flex;
@@ -107,6 +113,11 @@ input {
 .result__button span {
   font-weight: 500;
   color: inherit;
+}
+
+.result__button.disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }
 
 .creds a {
