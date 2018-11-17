@@ -1,5 +1,6 @@
 import React from 'react'
 import Clipboard from 'react-clipboard.js'
+import Head from 'next/head'
 
 import '../style.css'
 
@@ -44,6 +45,15 @@ class Spacerator extends React.Component {
   render() {
     return (
       <main>
+        <Head>
+          <title>Spacerator</title>
+          <meta charSet="utf-8" />
+          <meta name="description" content="A little utility to track out text. Inspired by Google Slides' lack of letterspacing."/>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+        </Head>
         <h1>
           Spacerator <span className="version">v1.0</span>
         </h1>
