@@ -39,7 +39,7 @@ h1 {
   max-width: 30em;
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
 }
 
 .inputContainer {
@@ -49,7 +49,7 @@ h1 {
   max-width: 343px;
   font-size: 16px;
   padding: 0 12px;
-  margin-bottom: 56px;
+  margin-bottom: 44px;
   border: unset;
   border: 1px solid #d0d0d0;
   justify-content: baseline;
@@ -69,6 +69,7 @@ input {
   justify-content: baseline;
   font-size: 24px;
   padding: 12px;
+  cursor: pointer;
 }
 
 .inputContainer__clear span {
