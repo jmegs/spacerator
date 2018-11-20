@@ -121,6 +121,15 @@ input {
   cursor: not-allowed;
 }
 
+.creds {
+  margin-bottom: 8px;
+}
+
 .creds a {
   color: #a1a1a1;
+  transition: color 240ms;
+}
+
+.creds a:hover {
+  color: dodgerblue;
 }

@@ -90,9 +90,12 @@ class Spacerator extends React.Component {
             <span>Copy</span>
           </Clipboard>
         </div>
-        <span className="creds">
+        <div className="creds">
           made by <a href="https://twitter.com/jmegs">@jmegs</a>
-        </span>
+        </div>
+        <div className="creds">
+          source on <a href="https://github.com/jmegs/spacerator.git">github</a>
+        </div>
       </main>
     )
   }
