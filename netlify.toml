@@ -1,8 +1,0 @@
-[build]
-  command = "npm run export"
-  publish = "out"
-
-[[redirects]]
-  from = "/"
-  to = "https://tinytools.design/letterspacer"
-  status = 301
